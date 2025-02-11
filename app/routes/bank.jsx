@@ -3,8 +3,9 @@ import { createClient } from "@supabase/supabase-js";
 import "./css/bankcss.css";
 
 // Supabase configuration
-const supabaseUrl = process.env.REACT_APP_SUPABASE_URL;
-const supabaseKey = process.env.REACT_APP_SUPABASE_KEY;
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+const supabaseKey = import.meta.env.VITE_SUPABASE_KEY;
+
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 export default function Bank() {
@@ -12,9 +13,12 @@ export default function Bank() {
 
   useEffect(() => {
     const fetchTitans = async () => {
-      const { data, error } = await supabase
+      const {data, error } = await supabase
         .from("titaninfo")
         .select("*");
+      if (data) {
+        console.log("Data exists: ", data);
+      }
 
       if (error) {
         console.error("❌ Supabase Connection Failed:", error);
