@@ -1,0 +1,29 @@
+
+.titan-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    width: 80%;
+    height: auto;
+  }
+  
+  .titan-card {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    height: auto;
+    width: 160px;
+    overflow: hidden;
+  }
+  
+  .titan-card :hover{
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    height: auto;
+    width: 160px;
+    overflow: hidden;
+  }
+  .titan-card img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }

@@ -1,13 +1,18 @@
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
+import Table from "./table";
+import Bank from "./bank";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "Titans" },
+    { name: "description", content: "A website where you can rank titans" },
   ];
 }
 
 export default function Home() {
-  return <Welcome />;
+  return <div> 
+            <div> Rank Some Titans 🔥</div> 
+            <Table />
+            <Bank />
+         </div>;
 }
