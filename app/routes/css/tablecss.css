@@ -1,14 +1,15 @@
 #table {
-    border-color: white;
-    background-color: grey;
+    background-color: black;
     gap: 10px;
     width: 75vw;
     display: flex;
     flex-direction: column;
     gap: 8px;
+    margin-left: 10px;
 }
 .container {
     height: 150px;
+    border-radius: 3px;
     background-color: #1a1a1a;
     display: flex;
     align-items: center;
@@ -16,14 +17,32 @@
 }
 
 .box {
-    width: 80px;
+    width: 150px;
     height: 100%;
     color: black;
     font-weight: bold;
+    font-size: 0.4em;
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
     left: 0;
     top: 0;
+}
+
+#rank1 {
+    background-color: #0FFF50;
+}
+
+#rank2 {
+    background-color: #FFFF00;
+}
+
+#rank3 {
+    background-color: #fe4d27;
+}
+
+#rank4 {
+    background-color: grey;
 }

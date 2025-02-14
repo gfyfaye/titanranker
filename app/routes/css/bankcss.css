@@ -1,29 +1,72 @@
 
 .titan-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 10px;
-    width: 80%;
+    width: 90%;
+    margin: 0 auto;
     height: auto;
   }
   
   .titan-card {
     aspect-ratio: 1 / 1;
-    width: 100%;
     height: auto;
-    width: 160px;
+    width: 200px;
     overflow: hidden;
+    position: relative;
+    display: inline-block;
+    border-radius: 5px;
   }
   
-  .titan-card :hover{
-    aspect-ratio: 1 / 1;
-    width: 100%;
-    height: auto;
-    width: 160px;
-    overflow: hidden;
-  }
   .titan-card img {
     object-fit: cover;
     width: 100%;
     height: 100%;
   }
+
+.button-grid {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  width: 90%;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.titan-card:hover{
+  transform: scale(1.2);
+  z-index: 3;
+}
+
+/* Show Buttons Only When Hovering */
+.titan-card:hover .button-grid {
+  opacity: 0.85;
+}
+
+.button-row {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.action-button {
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 17px;
+  text-align: center;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.action-button:hover {
+  filter: brightness(75%);
+}

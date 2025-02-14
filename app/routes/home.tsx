@@ -1,5 +1,4 @@
 import type { Route } from "./+types/home";
-import Table from "./table";
 import Bank from "./bank";
 
 export function meta({}: Route.MetaArgs) {
@@ -11,8 +10,7 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Home() {
   return <div> 
-            <div> Rank Some Titans 🔥</div> 
-            <Table />
+            <div> Rank Titan Drip 🔥 <span style={{fontSize:"0.5em"}}>JUST FOR FUN IDK BY GRACE</span></div> 
             <Bank />
          </div>;
 }
