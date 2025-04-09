@@ -1,12 +1,10 @@
 import "./css/tablecss.css";
 
-
 export default function Table() {
 
     return <div id="table">
             <div className="container">
               <div className="box" id="rank1">founding core 👑✨</div>
-              <div></div>
             </div>
             <div className="container" >
               <div className="box" id="rank2">wall maria approved </div>
